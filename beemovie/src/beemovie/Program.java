@@ -10,7 +10,7 @@ public class Program
 		
 		System.out.println(meme("b b b"));
 		
-		System.out.println("ba bien");
+		System.out.println(meme("ba bien"));
 	}
 
 	private static int[] wordLimits(String text, int index)
@@ -46,9 +46,7 @@ public class Program
 		String result = new String(text);
 		
 		int pad = 0;
-		
-		int padcount = 1;
-						
+		 						
 		for(int i = 0; i < text.length(); i++)
 		{
 			//System.out.println(result);
@@ -63,11 +61,10 @@ public class Program
 				System.out.println(text.substring(0, cuts[1]));
 				System.out.println(text.substring(cuts[1], text.length()));
 				
-				String space = "";
 				
 				//if(i == 0) space = " ";
 				
-				result = result.substring(0, cuts[0] + pad) + space
+				result = result.substring(0, cuts[0] + pad)
 						+ text.substring(0, cuts[1])
 						+ text.substring(cuts[1], text.length());
 				
