@@ -6,12 +6,11 @@ public class Program
 	public static void main(String[] args)
 	{
 		// TODO Auto-generated method stub
-		
-		int[] ans = wordLimits("a hola a todos", 2);
-				
-		System.out.println(ans[0] + " " + ans[1]);
-		
 		System.out.println(meme("boy a hacer bee movie bien y bad y muy bad"));
+		
+		System.out.println(meme("b b b"));
+		
+		System.out.println("ba bien");
 	}
 
 	private static int[] wordLimits(String text, int index)
@@ -20,7 +19,7 @@ public class Program
 		
 		int i = index;
 		
-		while(i > 0 && text.charAt(i - 1) != ' ')
+		while(i > 0 && text.charAt(i) != ' ')
 		{
 			i--;
 		}
@@ -31,12 +30,12 @@ public class Program
 		
 		int j = index;
 		
-		while(j < text.length() - 1 && text.charAt(j + 1) != ' ')
+		while(j < text.length() && text.charAt(j) != ' ')
 		{
 			j++;
 		}
 		
-		limits[1] = ++j;
+		limits[1] = j;
 		
 		return limits;	
 	}
@@ -58,18 +57,24 @@ public class Program
 			{
 				int[] cuts = wordLimits(text, i);
 				
+				//System.out.println(result.length());
+				
 				System.out.println(result.substring(0, cuts[0] + pad));
 				System.out.println(text.substring(0, cuts[1]));
 				System.out.println(text.substring(cuts[1], text.length()));
-				System.out.println("//////////////////////////////");
 				
+				String space = "";
 				
-				result = result.substring(0, cuts[0] + pad)
+				//if(i == 0) space = " ";
+				
+				result = result.substring(0, cuts[0] + pad) + space
 						+ text.substring(0, cuts[1])
 						+ text.substring(cuts[1], text.length());
 				
-				pad = pad + cuts[1] + 1;
-				
+				System.out.println(result);
+				System.out.println("//////////////////////////////");
+
+				pad = pad + cuts[0] + 2;
 			}
 		}
 		
