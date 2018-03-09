@@ -19,6 +19,9 @@ public class ProgramTest {
 		Assert.assertEquals("un pato que un pato que bota", Program.meme("un pato que bota"));
 		Assert.assertEquals("bien bien bad bien bad bad", Program.meme("bien bad bad"));
 		Assert.assertEquals(" ", Program.meme(" "));
+		Assert.assertEquals("rbrbrbrbrbrbr", Program.meme("rbrbrbrbrbrbr"));
+		Assert.assertEquals("b", Program.meme("b"));
+		Assert.assertEquals("Assert.assertEquals(expected, actual);", Program.meme("Assert.assertEquals(expected, actual);"));
 	}
 
 }

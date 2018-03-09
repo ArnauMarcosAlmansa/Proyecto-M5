@@ -100,7 +100,7 @@ public class Program
 	 * @return A String of the text memetized.
 	 */
 	 
-	private static String meme(String text)
+	public static String meme(String text)
 	{
 		String result = new String(text);
 		
@@ -125,7 +125,7 @@ public class Program
 				
 				int mod = 0;
 				
-				if(isFirst && nob)
+				if(isFirst && nob && !(cuts[0] == 0))
 				{
 					isFirst = false;
 					mod = 1;
