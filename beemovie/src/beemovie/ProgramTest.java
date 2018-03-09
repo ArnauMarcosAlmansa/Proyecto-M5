@@ -22,6 +22,7 @@ public class ProgramTest {
 		Assert.assertEquals("rbrbrbrbrbrbr", Program.meme("rbrbrbrbrbrbr"));
 		Assert.assertEquals("b", Program.meme("b"));
 		Assert.assertEquals("Assert.assertEquals(expected, actual);", Program.meme("Assert.assertEquals(expected, actual);"));
+		Assert.assertEquals("a a b c", Program.meme("a b c"));
 	}
 
 }

@@ -76,7 +76,7 @@ public class Program
 			i--;
 		}
 		
-		if(i != 0) i--;
+		//if(i != 0) i--;
 		
 		limits[0] = i;
 		
@@ -90,7 +90,7 @@ public class Program
 		if(j == text.length() - 1) j++;
 		
 		limits[1] = j;
-		
+				
 		return limits;	
 	}
 	
@@ -106,7 +106,6 @@ public class Program
 		
 		int pad = 0;
 		
-		boolean isFirst = false;
 		boolean nob = true;
 		
 						 						
@@ -125,9 +124,8 @@ public class Program
 				
 				int mod = 0;
 				
-				if(isFirst && nob && !(cuts[0] == 0))
+				if(nob && cuts[0] != 0)
 				{
-					isFirst = false;
 					mod = 1;
 				}
 				
@@ -157,6 +155,7 @@ public class Program
 				}
 				
 				/*
+				System.out.println(cuts[0] + pad + mod);
 				System.out.println(result.substring(0, cuts[0] + pad + mod));
 				System.out.println(text.substring(0, cuts[1]));
 				System.out.println(text.substring(cuts[1], text.length()));
@@ -172,13 +171,9 @@ public class Program
 				System.out.println("/////////////////////");
 				*/
 				
-				pad = pad + cuts[0] + 2 + mod;
+				pad = pad + cuts[0] + 1 + mod;
 				
 				i = cuts[1];
-			}
-			else
-			{
-				isFirst = true;
 			}
 		}
 		
